@@ -1,46 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Het Vrije Podium</title>
-    <meta content="Dennis D'Ooghe" name="author">
-    <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" type="text/css" href="hvp.css" />
-</head>
-<body>
-  <div class="container" id="page">
-    <header class="site-header grid_6 paprh" id="masthead" role="banner">
-      <div class="logo grid_3">
-        <a href="http://hetvrijepodium.be" style="display: block">
-          <img style="width: 387px; height: 150px;" alt="Het Vrije Podium" src="img/logos/newlogo-web alt.png" />
-        </a>
-      </div>
-    </header>
-    
-    <div class="grid_6" id="top_tier">
-      <div id="tmenu">
-        <div class="section topmenu">
-          <ul class="sfmenu" id="menu-primary">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="theater.html">Theater</a></li>
-            <li><a href="studio.html">Studio</a></li>
-            <li><a href="creatie.html">Creatie</a></li>
-            <li><a href="film.html">Film</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="lid.html">Lid worden</a></li>
-            <li><a href="about.html">HVP?</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<?php
+  include 'include/pagestatics.php';
+  include 'include/pagemenu.php';
 
-    <div class="clear"></div>
+  printPageHeader();
+  printMenu('film');
 
-    <div class="cf" id="main">
-      <div class="grid_4">
-        <div class="site-content papr section" id="content">
-          <article class="hentry">
+  printContentHeader();
+?>
+
             <header>
               <h2 class="entry-title">
                 Filmvertoning
@@ -48,31 +15,34 @@
             </header>
             <div class="entry-body">
               <p>
-              Eenmaal per maand vertoont HVP een film op de VUB-campus, waarbij elk semester in het teken staat van een thema.<br />
+              Eenmaal per maand vertoont HVP een film op de VUB-campus, waarbij elk semester in het teken staat van een thema.
               Dit thema kan draaien rond een regio, een filmstijl, een regisseur... noem maar op.
-              Wat vooral belangrijk is, is dat het gaat om waardevolle films die we hier niet courant te zien krijgen.
               </p>
               <p>
-              Het thema van dit najaar is: <b>Chinese films</b>.<br />
-              De vertoningen zijn telkens de tweede dinsdag van de maand, en worden natuurlijk in de originele taal (met ondertiteling) getoond.
+              Het thema van dit voorjaar is: <b>Verfilmde toneelstukken</b>.<br />
+              De vertoningen zijn telkens de tweede dinsdag van de maand.
               <ol>
-                <li>06/10: <a href="http://www.imdb.com/title/tt0299977/" target="blank">Hero (Ying xiong, 2002)</a></li>
-                <li>03/11: <a href="http://www.imdb.com/title/tt0385004/" target="blank">House of flying daggers (Shi mian mai fu, 2004)</a></li>
-                <li>01/12: <a href="http://www.imdb.com/title/tt0190332/" target="blank">Crouching tiger hidden dragon (Wo hu cang long, 2000)</a></li>
+                <li>08/03: Titel te bepalen</li>
+                <li>12/04: <a href="http://www.imdb.com/title/tt4594834/" target="blank">Chi-Raq</a> (adaptatie van het Griekse toneelstuk "Lysistrata"</li>
+                <li>10/05: Titel te bepalen</li>
               </ol>
+              We maken de andere titels bekend zodra ze vaststaan.
               </p>
               <p>
               De gewone toegangsprijs is &euro;1.<br />
-              <a href="lid.html">Leden van HVP</a> krijgen zoals altijd een euro korting, en mogen dus gratis binnen.<br />
-              Opgelet, leden van ESN krijgen dit semester dezelfde korting!
-              </p>
+              <a href="/lid">Leden van HVP</a> krijgen zoals altijd een euro korting, en mogen dus gratis binnen.<br />
+
+              <!--
+              Voor archivering en misschien later gebruik
+              Najaar 2015: Chinese films
+                <li>06/10: <a href="http://www.imdb.com/title/tt0299977/" target="blank">Hero (Ying xiong, 2002)</a></li>
+                <li>03/11: <a href="http://www.imdb.com/title/tt0385004/" target="blank">House of flying daggers (Shi mian mai fu, 2004)</a></li>
+                <li>01/12: <a href="http://www.imdb.com/title/tt0190332/" target="blank">Crouching tiger hidden dragon (Wo hu cang long, 2000)</a></li>
+              -->
+
             </div>
-          </div>
-        </article>
-      </div>
-    </div>
-    <!-- Optionally, add sidebar here -->
-  </div>
-</div>
-</body>
-</html>
+
+<?php
+  printContentFooter();
+  printPageFooter();
+?>

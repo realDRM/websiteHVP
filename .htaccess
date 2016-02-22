@@ -1,19 +1,32 @@
 Options +FollowSymlinks
+# Allows .html files to be interpreted as php
+AddType application/x-httpd-php .html
 RewriteEngine On
 RewriteBase /
+
+# 1. Redirect naar niet-www versie met 301
+# 2. Strip all trailing slashes met 301
+# 3. Internally replace "woordX" met "woordX.html"
+# 4. Internally replace "woord1/woord2/../woordX" met "woord1_woord2_..._woordX.html"
 
 # Autoredirect naar de niet-www versie
 RewriteCond %{HTTP_HOST}  !^hetvrijepodium\.be$  [NC]
 RewriteRule ^(.*)$  http://hetvrijepodium.be/$1 [R=301,L]
 
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^(.*)$ ..%{REQUEST_URI} [NC]
+# Trailing slash is removed
+RewriteRule ^(.*)/+$ $1 [R=301,L]
 
-# temporary redirect for theater.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^theater\.html$ theater/theater [R=301,NC,L]
-
-# URL simplification
-# RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^theater/([\w-]+)/?$ $1.html [NC,L]
 #ErrorDocument 404 /index.html
+# No slashes and no dots!
+RewriteRule ^([^/\.]+)$ $1.html [L]
+
+# Check if an actual file or directory
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .? - [S=2]
+# It is not an actual file or directory
+  # A single slash? Replace it, and append .html
+  RewriteRule ^([^/]+)/([^/]+)$ $1_$2.html [L]
+  # More than one slash? Replace it and (automatically) loop
+  RewriteRule ^([^/]+)/(.+)$ $1_$2
+

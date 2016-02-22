@@ -1,56 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-    <title>Het Vrije Podium</title>
-    <meta content="Dennis D'Ooghe" name="author">
-    <link rel="icon" href="/favicon.png" />
-    <link rel="stylesheet" type="/text/css" href="/hvp.css" />
-</head>
-<body>
-  <div class="container" id="page">
-    <header class="site-header grid_6 paprh" id="masthead" role="banner">
-      <div class="logo grid_3">
-        <a href="http://hetvrijepodium.be" style="display: block">
-          <img style="width: 387px; height: 150px;" alt="Het Vrije Podium" src="/img/logos/newlogo-web alt.png" />
-        </a>
-      </div>
-    </header>
-    
-    <div class="grid_6" id="top_tier">
-      <div id="tmenu-double">
-        <div class="section topmenu">
-          <ul class="sfmenu" id="menu-primary">
-            <li><a href="/index.html">Start</a></li>
-            <li><a href="/theater.html" class="active">Theater</a></li>
-            <li><a href="/studio.html">Studio</a></li>
-            <li><a href="/creatie.html">Creatie</a></li>
-            <li><a href="/film.html">Film</a></li>
-            <li><a href="/media.html">Media</a></li>
-            <li><a href="/lid.html">Lid worden</a></li>
-            <li><a href="/about.html">HVP?</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="bmenu">
-        <div class="section topmenu">
-          <ul class="submenu" id="menu-secondary">
-            <li><a href="/theater/theater" class="active">Algemeen</a></li>
-            <li><a href="/theater/kussenman">2015 - De Kussenman</a></li>
-            <li><a href="/theater/dna-av">2014 - DNA &amp; Andere Verhalen</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<?php
+  include 'include/pagestatics.php';
+  include 'include/pagemenu.php';
 
-    <div class="clear"></div>
+  printPageHeader();
+  printMenu('theater');
 
-    <div class="cf" id="main">
-      <div class="grid_4">
-        <div class="site-content papr section" id="content">
-          <article class="hentry">
-            <header>
+  printContentHeader();
+?>
+           <header>
               <h2 class="entry-title">
                 Theater
               </h2>
@@ -65,19 +22,11 @@
               Sindsdien zijn er een hoop activiteiten bijgekomen, maar theater blijft een hoofdbestanddeel van onze activiteiten.
               </p>
               <p>
-              Op <b>4 en 11 december 2015</b> kan je bij ons terecht voor <b><a href="/theater/kussenman">De Kussenman</a></b>.<br />
-              Reserveer nu je tickets! 
-              </p>
-              <p>
-              Op de andere pagina's vind je informatie over de verleden en komende theaterproducties van HVP.
+              Onze laatste voorstelling was <b><a href="/theater/kussenman">De Kussenman</a></b>, gespeeld op 4 en 11 december 2015.
               </p>
             </div>
-            </div>
-          </article>
-        </div>
-      </div>
-      <!-- Optionally, add sidebar here -->
-    </div>
-  </div>
-</body>
-</html>
+
+<?php
+  printContentFooter();
+  printPageFooter();
+?>
