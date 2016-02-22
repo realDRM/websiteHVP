@@ -1,0 +1,247 @@
+  /* Basics */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+      border: 0;
+  /*    font-family: inherit;
+      font-size: 100%;
+      font-style: inherit;
+      font-weight: inherit;
+   */   margin: 0;
+      outline: 0;
+      padding: 0;
+      vertical-align: baseline;
+    }
+    html {
+      font-size: 62.5%;
+      overflow-y: scroll;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    body, button, input, select, textarea {
+      background: #e3e3e3;
+      color: #666666;
+      font-family: "Lato", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    article, header, section {
+      display: block;
+    }
+    
+  /* links */
+    a {
+      color: #db4830;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #db4830;
+    }
+    a:focus {
+      outline: thin dotted;
+    }
+    a:hover, a:active {
+      outline: 0;
+      text-decoration: underline;
+    }
+    a:hover, a:focus, a:active {
+      color: #f75036;
+    }
+    a img {
+      border: 0;
+    }
+    ul {
+      list-style: none;
+    }
+
+  /* headings */
+    h1, h2, h3, h4, h5, h6 {
+      clear: both;
+      margin: 0px 0px 10px 0px;
+    }
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+    h1 { font-size: 24px; line-height: 30px; }
+    h2 { font-size: 22px; line-height: 26px; }
+    h3 { font-size: 18px; line-height: 24px; }
+    h4 { font-size: 16px; line-height: 20px; }
+    h5 { font-size: 14px; line-height: 18px; }
+    h6 { font-size: 14px; line-height: 18px; }
+
+  /* text elements */
+    p {
+      margin-bottom: 1.5em;
+    }
+    ul, ol {
+      margin: 0 0 1.5em 3em;
+    }
+    dt {
+      font-weight: bold;
+    }
+    dd {
+      margin: 0 1.5em 1.5em;
+    }
+    button, input, select, textarea {
+      font-size: 100px;
+      margin: 0;
+      vertical-align: baseline;
+    }
+
+  /* Containers */
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 750px;
+    }
+/*    .container .grid_3 {width: 400px;} */
+    .container .grid_4 {width: 730px;}
+    .container .grid_6 {width: 730px;}
+
+  /* Top of page */
+    #masthead {
+      margin-bottom: 12px;
+      margin-top: 30px;    
+    }
+    .grid_3, .grid_4, .grid_6 {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .logo {
+      padding: 20px 0px;
+      margin-right: 0px;
+    }
+    .logo img {
+      display: block;
+      padding-left: 15px;
+      padding-top: 0px;
+    }
+    .site-header img {
+      max-width: 100%;
+      width: auto;
+    }
+    #tmenu {
+      height: 40px;
+      background: #db4830;
+      border-radius: 5px 5px 5px 5px;
+      -webkit-box-shadow: 1px 1px 0px 0px #bbb;
+      box-shadow: 1px 1px 0px 0px #bbb;
+    }
+    #tmenu-double {
+      height: 40px;
+      background: #db4830;
+      border-radius: 5px 5px 0px 0px;
+      -webkit-box-shadow: 1px 1px 0px 0px #bbb;
+      box-shadow: 1px 1px 0px 0px #bbb;
+    }
+    #bmenu {
+      height: 40px;
+      background: #E07463;
+      border-style: solid;
+      border-color: #ED9E91;
+      border-width: 1px 0 0 0;
+      border-radius: 0 0 5px 5px;
+      -webkit-box-shadow: 1px 1px 0px 0px #bbb;
+      box-shadow: 1px 1px 0px 0px #bbb;
+    }
+    .topmenu {
+      margin: 0px 0px;
+      padding: 0px 0px;
+    }
+    .topmenu ul {
+      width: auto;
+      float: left;
+      list-style: none;
+      margin: 0px 20px;
+      padding: 0px 0px;
+    }
+    .topmenu li {
+      font-size: 12px;
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    .topmenu li a {
+      color: #ffffff;
+      display: block;
+      margin: 0;
+      padding: 11px 15px 11px 0pc;
+      text-decoration: none;
+      position: relative;
+      font-weight: 400;
+    }
+    .topmenu li a:hover {
+      text-decoration: underline;
+    }
+    .topmenu li a.active {
+      text-decoration: underline;
+    }
+
+  /* Content */
+    #main {
+      margin: 12px 0px;
+    }
+    .hentry {
+      margin: 0 0 1.5em;
+    }
+    article.hentry {
+      padding: 20px 0px 0px 0px;
+    }
+    .entry-body {
+      margin: 5px 0 0;
+    }
+    .centered {
+      text-align: center;
+    }
+    #content {
+      font-size: 1.4rem; /* consistency problem with Chrome */
+    }
+/*    h2.entry-title {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+*/
+  /* nice */
+    .papr, .paprh {
+      background: #ffffff;
+      border-radius: 5px;
+      -webkit-box-shadow: 1px 1px 0px 0px #bbb;
+      box-shadow: 1px 1px 0px 0px #bbb;
+    }
+    .papr {
+      padding: 0px 20px 20px 20px;
+    }
+    .paprh {
+      padding: 0px;
+    }
+    .clear {
+      clear: both;
+    }
+
+    .site-content {
+      padding-bottom: 30px;
+    }
+
+  /* Clearfix */
+    .cf:before,
+    .cf:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+    }
+    .cf:after {
+      clear: both;
+    }
+
+
